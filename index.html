@@ -44,7 +44,7 @@
         "@context": "https://schema.org",
         "@type": "ProfilePage",
         "dateCreated": "2026-07-02T17:50:37+09:00",
-        "dateModified": "2026-08-09T11:14:25+09:00",
+        "dateModified": "2026-08-09T17:03:46+09:00",
         "mainEntity": {
         "@type": "Person",
         "name": "上堀健太",
@@ -243,47 +243,6 @@
         margin-top: 1em;
       }
 
-      /* ===== 経歴タイムライン ===== */
-      .career {
-        display: grid;
-        gap: 0;
-      }
-      .career-row {
-        display: grid;
-        grid-template-columns: 180px 1fr;
-        gap: 24px;
-        padding: 28px 0;
-        border-top: 1px solid var(--hairline);
-      }
-      .career-row:first-child {
-        border-top: none;
-        padding-top: 0;
-      }
-      .career-when {
-        font-family: var(--serif);
-        font-size: 14px;
-        color: var(--ink-soft);
-        letter-spacing: 0.05em;
-        padding-top: 4px;
-      }
-      .career-org {
-        font-family: var(--serif);
-        font-size: 19px;
-        font-weight: 500;
-        margin-bottom: 2px;
-      }
-      .career-role {
-        font-size: 13px;
-        color: var(--moss);
-        margin-bottom: 10px;
-        letter-spacing: 0.05em;
-      }
-      .career-desc {
-        font-size: 14.5px;
-        color: var(--ink);
-        max-width: 560px;
-      }
-
       /* ===== カードグリッド(個人開発・リンク) ===== */
       .cards {
         display: grid;
@@ -384,10 +343,6 @@
         section {
           padding: 56px 0;
         }
-        .career-row {
-          grid-template-columns: 1fr;
-          gap: 6px;
-        }
       }
     </style>
   </head>
@@ -417,41 +372,6 @@
     </header>
 
     <main class="wrap">
-      <section>
-        <h2 class="sec-label">経歴<span>CAREER</span></h2>
-        <div class="career">
-          <div class="career-row">
-            <div class="career-when">2022.10 — 現在</div>
-            <div>
-              <div class="career-org">スタートアップ</div>
-              <div class="career-role">フルスタックエンジニア</div>
-              <p class="career-desc">
-                ファンクラブSaaS、LPO
-                SaaS、オンラインデザインスクールなど複数SaaSを0→1で開発。Go/GraphQL/Next.jsのマルチテナント基盤設計、Bigtableによる大規模トラッキング集計、Valkey移行でのインフラコスト削減、AWS
-                Lambda + Bedrockによる業務自動化を実施。
-              </p>
-            </div>
-          </div>
-          <div class="career-row">
-            <div class="career-when">2017.04 — 2022.09</div>
-            <div>
-              <div class="career-org">不動産情報サービス大手</div>
-              <div class="career-role">アプリケーションエンジニア</div>
-              <p class="career-desc">
-                不動産ポータルのUX機能開発・SEO改善・課金料率改定など、ビジネスモデルに関わる開発を担当。スクラムマスター/エンジニアリーダーとして開発推進とチーム改善を実施。社内新規事業提案制度で入賞し、事業オーナーとしてフィジビリティ検証を経験。
-              </p>
-            </div>
-          </div>
-          <div class="career-row">
-            <div class="career-when">2017.03</div>
-            <div>
-              <div class="career-org">日本大学 文理学部 情報科学科</div>
-              <div class="career-role">卒業</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section>
         <h2 class="sec-label">個人開発<span>PRODUCTS</span></h2>
         <div class="cards">
