@@ -44,7 +44,7 @@
         "@context": "https://schema.org",
         "@type": "ProfilePage",
         "dateCreated": "2026-07-02T17:50:37+09:00",
-        "dateModified": "2026-08-12T11:06:54+09:00",
+        "dateModified": "2026-08-13T09:45:00+09:00",
         "mainEntity": {
         "@type": "Person",
         "name": "上堀健太",
@@ -270,10 +270,15 @@
       }
       .card .svc::after {
         content: "→";
+        display: inline-block;
         margin-left: 8px;
         color: var(--moss);
         font-family: var(--sans);
         font-size: 14px;
+        transition: transform 0.2s ease;
+      }
+      .card:hover .svc::after {
+        transform: translateX(4px);
       }
       .card .desc {
         font-size: 13px;
@@ -289,6 +294,27 @@
         border-radius: 2px;
         padding: 1px 8px;
         margin-bottom: 10px;
+      }
+      .card-head {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 12px;
+      }
+      .card-head .icon {
+        display: block;
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        border: 1px solid var(--hairline);
+        background: #fff;
+      }
+      .card-head .svc {
+        margin-bottom: 4px;
+      }
+      .card-head .tag {
+        margin-bottom: 0;
       }
 
       /* ===== フッター ===== */
@@ -376,22 +402,61 @@
         <h2 class="sec-label">個人開発<span>PRODUCTS</span></h2>
         <div class="cards">
           <a class="card" href="https://honnejob.jp/">
-            <span class="tag">Webサービス</span>
-            <div class="svc">Honne Job</div>
+            <div class="card-head">
+              <img
+                class="icon"
+                src="/icons/honnejob.png"
+                alt=""
+                width="48"
+                height="48"
+                loading="lazy"
+                decoding="async"
+              />
+              <div>
+                <div class="svc">Honne Job</div>
+                <span class="tag">Webサービス</span>
+              </div>
+            </div>
             <div class="desc">
               面接・選考対策のための企業口コミサイト。コーディングテストの種類と難易度、面接の回数、実際に聞かれた質問など、選考の中身を受験者の投稿から調べられる。年収・働きやすさの口コミも掲載。
             </div>
           </a>
           <a class="card" href="https://enlog.web.app/">
-            <span class="tag">iOSアプリ</span>
-            <div class="svc">Enlog（エンログ）</div>
+            <div class="card-head">
+              <img
+                class="icon"
+                src="/icons/enlog.png"
+                alt=""
+                width="48"
+                height="48"
+                loading="lazy"
+                decoding="async"
+              />
+              <div>
+                <div class="svc">Enlog（エンログ）</div>
+                <span class="tag">iOSアプリ</span>
+              </div>
+            </div>
             <div class="desc">
               友達・同僚の好きなもの・苦手なもの・誕生日・話したことを記録する、自分専用の人メモ帳。「あれ、なんだっけ？」をなくす。データは端末の外に出ず、アカウント登録・広告・トラッキングなし。
             </div>
           </a>
           <a class="card" href="https://kamihork.github.io/agentfdr/">
-            <span class="tag">OSS</span>
-            <div class="svc">agentfdr</div>
+            <div class="card-head">
+              <img
+                class="icon"
+                src="/icons/agentfdr.png"
+                alt=""
+                width="48"
+                height="48"
+                loading="lazy"
+                decoding="async"
+              />
+              <div>
+                <div class="svc">agentfdr</div>
+                <span class="tag">OSS</span>
+              </div>
+            </div>
             <div class="desc">
               コーディングエージェントのフライトレコーダー。Claude Code
               がループした、ゴールから逸れた、いつの間にか200万トークン燃やしていた——
@@ -400,8 +465,21 @@
             </div>
           </a>
           <a class="card" href="https://kamihork.github.io/cckeep/">
-            <span class="tag">OSS</span>
-            <div class="svc">cckeep</div>
+            <div class="card-head">
+              <img
+                class="icon"
+                src="/icons/cckeep.png"
+                alt=""
+                width="48"
+                height="48"
+                loading="lazy"
+                decoding="async"
+              />
+              <div>
+                <div class="svc">cckeep</div>
+                <span class="tag">OSS</span>
+              </div>
+            </div>
             <div class="desc">
               Claude Code の Remote Control
               接続を守る常駐ツール。tmux上のセッションを監視し、切断されたら安全なタイミングだけを選んで自動再接続。スマホからの遠隔操作が途切れない。依存ゼロ・クラウド不要・テレメトリなし。MITライセンス。
@@ -411,8 +489,21 @@
             class="card"
             href="https://chromewebstore.google.com/detail/copy-as-markdown-for-ai/ookpfincecbbcdphphhjobiajhikjbhi"
           >
-            <span class="tag">Chrome拡張 · 4,000+ users</span>
-            <div class="svc">Copy as Markdown for AI</div>
+            <div class="card-head">
+              <img
+                class="icon"
+                src="/icons/copymd.png"
+                alt=""
+                width="48"
+                height="48"
+                loading="lazy"
+                decoding="async"
+              />
+              <div>
+                <div class="svc">Copy as Markdown for AI</div>
+                <span class="tag">Chrome拡張 · 4,000+ users</span>
+              </div>
+            </div>
             <div class="desc">
               WebページをAIに渡しやすいMarkdown形式でコピーするChrome拡張機能。ワンクリックで
               Web ページを LLM 最適化 Markdown + YAML
@@ -420,22 +511,61 @@
             </div>
           </a>
           <a class="card" href="https://apps.apple.com/jp/app/id6760031465">
-            <span class="tag">iOSアプリ</span>
-            <div class="svc">Warikaan</div>
+            <div class="card-head">
+              <img
+                class="icon"
+                src="/icons/warikaan.png"
+                alt=""
+                width="48"
+                height="48"
+                loading="lazy"
+                decoding="async"
+              />
+              <div>
+                <div class="svc">Warikaan</div>
+                <span class="tag">iOSアプリ</span>
+              </div>
+            </div>
             <div class="desc">
               大切な人のための割り勘・家計簿アプリ。AIレシート読み取り・リアルタイム同期・ワンタップ清算で、ふたりのお金をシンプルに。
             </div>
           </a>
           <a class="card" href="https://note.com/kamihork/n/n6436a35d1016">
-            <span class="tag">Webサービス</span>
-            <div class="svc">times</div>
+            <div class="card-head">
+              <img
+                class="icon"
+                src="/icons/times.svg"
+                alt=""
+                width="48"
+                height="48"
+                loading="lazy"
+                decoding="async"
+              />
+              <div>
+                <div class="svc">times</div>
+                <span class="tag">Webサービス</span>
+              </div>
+            </div>
             <div class="desc">
               高性能AIから定期的なKPTフィードバックを受け取れる振り返り支援サービス。LINEから気軽に利用。
             </div>
           </a>
           <a class="card" href="https://pokemon-quiz-kh-2026.web.app/">
-            <span class="tag">Webサービス</span>
-            <div class="svc">ポケクイズ！</div>
+            <div class="card-head">
+              <img
+                class="icon"
+                src="/icons/pokequiz.png"
+                alt=""
+                width="48"
+                height="48"
+                loading="lazy"
+                decoding="async"
+              />
+              <div>
+                <div class="svc">ポケクイズ！</div>
+                <span class="tag">Webサービス</span>
+              </div>
+            </div>
             <div class="desc">
               ポケモンの公式画像を見て名前を当てるクイズアプリ。1025匹の全ポケモンからランダムに出題され、正解したポケモンは図鑑に登録。
             </div>
