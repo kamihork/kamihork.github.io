@@ -44,7 +44,7 @@
         "@context": "https://schema.org",
         "@type": "ProfilePage",
         "dateCreated": "2026-07-02T17:50:37+09:00",
-        "dateModified": "2026-08-13T10:15:00+09:00",
+        "dateModified": "2026-08-17T13:20:00+09:00",
         "mainEntity": {
         "@type": "Person",
         "name": "上堀健太",
@@ -60,6 +60,10 @@
         "url": "https://kamihork.github.io/",
         "image": "https://kamihork.github.io/kamihork.jpg",
         "jobTitle": "Software Engineer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "narrative株式会社"
+        },
         "alumniOf": {
           "@type": "CollegeOrUniversity",
           "name": "日本大学"
@@ -243,6 +247,61 @@
         margin-top: 1em;
       }
 
+      /* ===== 経歴タイムライン ===== */
+      .career {
+        display: grid;
+        gap: 0;
+      }
+      .career-row {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        gap: 24px;
+        padding: 28px 0;
+        border-top: 1px solid var(--hairline);
+      }
+      .career-row:first-child {
+        border-top: none;
+        padding-top: 0;
+      }
+      .career-when {
+        font-family: var(--serif);
+        font-size: 14px;
+        color: var(--ink-soft);
+        letter-spacing: 0.05em;
+        padding-top: 4px;
+      }
+      .career-head {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 10px;
+      }
+      .career-logo {
+        display: block;
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        border: 1px solid var(--hairline);
+        background: #fff;
+      }
+      .career-org {
+        font-family: var(--serif);
+        font-size: 19px;
+        font-weight: 500;
+        margin-bottom: 2px;
+      }
+      .career-role {
+        font-size: 13px;
+        color: var(--moss);
+        letter-spacing: 0.05em;
+      }
+      .career-desc {
+        font-size: 14.5px;
+        color: var(--ink);
+        max-width: 560px;
+      }
+
       /* ===== カードグリッド(個人開発・リンク) ===== */
       .cards {
         display: grid;
@@ -375,6 +434,10 @@
         section {
           padding: 56px 0;
         }
+        .career-row {
+          grid-template-columns: 1fr;
+          gap: 6px;
+        }
       }
     </style>
   </head>
@@ -396,7 +459,7 @@
           </p>
           <p class="hero-lead">
             Software
-            Engineer。不動産情報サービス大手で主力プロダクトの機能開発とスクラムマスター/エンジニアリングリーダーを経験。現在はスタートアップで複数SaaSの0→1立ち上げから設計・運用までを一貫して担当。事業KPIに直結する改善と、生成AIなど最新技術の実務導入が得意。
+            Engineer。LIFULLではHOME'Sの機能開発とスクラムマスター/エンジニアリングリーダーを経験。narrativeでは複数SaaSの0→1立ち上げから設計・運用までを一貫して担当。事業KPIに直結する改善と、生成AIなど最新技術の実務導入が得意。
           </p>
         </div>
         <div class="hero-name" aria-label="上堀健太">上堀健太</div>
@@ -404,6 +467,67 @@
     </header>
 
     <main class="wrap">
+      <section>
+        <h2 class="sec-label">経歴<span>CAREER</span></h2>
+        <div class="career">
+          <div class="career-row">
+            <div class="career-when">2022.10 — 現在</div>
+            <div>
+              <div class="career-head">
+                <img
+                  class="career-logo"
+                  src="/icons/narrative.png"
+                  alt=""
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div>
+                  <div class="career-org">narrative株式会社</div>
+                  <div class="career-role">フルスタックエンジニア</div>
+                </div>
+              </div>
+              <p class="career-desc">
+                ファンクラブSaaS、LPO
+                SaaS、オンラインデザインスクールなど複数SaaSを0→1で開発。Go/GraphQL/Next.jsのマルチテナント基盤設計、Bigtableによる大規模トラッキング集計、Valkey移行でのインフラコスト削減、AWS
+                Lambda + Bedrockによる業務自動化を実施。
+              </p>
+            </div>
+          </div>
+          <div class="career-row">
+            <div class="career-when">2017.04 — 2022.09</div>
+            <div>
+              <div class="career-head">
+                <img
+                  class="career-logo"
+                  src="/icons/lifull.png"
+                  alt=""
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div>
+                  <div class="career-org">株式会社LIFULL</div>
+                  <div class="career-role">アプリケーションエンジニア</div>
+                </div>
+              </div>
+              <p class="career-desc">
+                不動産ポータルのUX機能開発・SEO改善・課金料率改定など、ビジネスモデルに関わる開発を担当。スクラムマスター/エンジニアリーダーとして開発推進とチーム改善を実施。社内新規事業提案制度で入賞し、事業オーナーとしてフィジビリティ検証を経験。
+              </p>
+            </div>
+          </div>
+          <div class="career-row">
+            <div class="career-when">2017.03</div>
+            <div>
+              <div class="career-org">日本大学 文理学部 情報科学科</div>
+              <div class="career-role">卒業</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section>
         <h2 class="sec-label">個人開発<span>PRODUCTS</span></h2>
         <div class="cards cards-products">
